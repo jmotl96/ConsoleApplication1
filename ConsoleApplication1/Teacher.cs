@@ -2,11 +2,11 @@
 
 namespace ConsoleApplication1.Properties
 {
-    public class Teacher : Person
+    public class Teacher : Person , Talkable
     {
         private int age;
 
-        public Teacher(int age, String name)
+        public Teacher(int age, String name):base(name)
         {
             //Super(name)
             this.Name = name;
@@ -22,6 +22,11 @@ namespace ConsoleApplication1.Properties
         public String talk()
         {
             return "Don't forget to do the assigned reading!";
+        }
+
+        public string getName()
+        {
+            return Name;
         }
     }
 }

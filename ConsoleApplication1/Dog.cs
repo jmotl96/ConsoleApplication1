@@ -3,13 +3,14 @@ using ConsoleApplication1.Properties;
 
 namespace ConsoleApplication1
 {
-    public class Dog : Pet
+    public class Dog : Pet , Talkable
     {
         private bool friendly;
 
-        public Dog(bool friendly, String name)
+        public Dog(bool friendly, String name):base(name)
         {
             //super name
+            
             this.friendly = friendly;
         }
 

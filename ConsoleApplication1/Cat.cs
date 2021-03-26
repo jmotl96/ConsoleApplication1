@@ -3,12 +3,12 @@ using ConsoleApplication1.Properties;
 
 namespace ConsoleApplication1
 {
-    public class Cat : Pet 
+    public class Cat : Pet , Talkable
     {
         private int mousesKilled;
         
         
-        public Cat(int mousesKilled, String name)
+        public Cat(int mousesKilled, String name):base(name)
         {
             // super(name);
             this.mousesKilled = mousesKilled;
@@ -28,6 +28,11 @@ namespace ConsoleApplication1
         {
             //return base.ToString();
             return "Cat: " + "Name=" + name + " mousesKilled=" + mousesKilled;
+        }
+
+        public string talk()
+        {
+            return "meow";
         }
     }
 }
